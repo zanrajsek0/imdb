@@ -1,7 +1,6 @@
-<html>
-    <head>
-    
-    </head>
+<?php
+    include_once "header.php"
+?>
 
     <body>
         <h1>Dobrodošli na strani INDEX!</h1>
@@ -19,5 +18,6 @@
         ?>
         <br>
         
-    </body>
-</html>
+<?php
+    include_once "footer.php"
+?>
