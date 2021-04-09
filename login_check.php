@@ -1,4 +1,6 @@
 <?php
+include_once "session.php";
+
 include_once "db.php";
 
 $email=$_POST['email'];
@@ -15,6 +17,11 @@ if(!empty($email) && !empty($pass) ){
         $user=$stmt->fetch();
 
         if(password_verify($pass,$user['pass'])){
+            
+            $_SESSION['user_id']=$user['id'];
+            $_SESSION['first_name']=$user['first_name'];
+            $_SESSION['last_name']=$user['last_name'];
+            $_SESSION['admin']=$user['admin'];
             header("Location: index.php"); die();
         }
     }
